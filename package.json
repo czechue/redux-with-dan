@@ -1,0 +1,25 @@
+{
+  "name": "redux-with-dan",
+  "version": "1.0.0",
+  "description": "- 1-05: Redux: Writing a Counter Reducer with Tests   - `npm install --save-dev babel-jest babel-core regenerator-runtime`   - `npm install -g jest`",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "jest": "^22.2.1",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czechue/redux-with-dan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czechue/redux-with-dan/issues"
+  },
+  "homepage": "https://github.com/czechue/redux-with-dan#readme"
+}
