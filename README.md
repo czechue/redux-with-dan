@@ -1,5 +1,9 @@
 ### Log
 
+- 1-10 Redux: Avoiding Object Mutations with Object.assign() and ...spread
+  - write code in playground
+  - test toggling object's properties in todo list function
+
 - 1-09 Redux: Avoiding Array Mutations with concat(), slice(), and ...spread
   - write code in playground
   - `npm install deep-freeze`
