@@ -1,5 +1,10 @@
 ### Log
 
+- 1-09 Redux: Avoiding Array Mutations with concat(), slice(), and ...spread
+  - write code in playground
+  - `npm install deep-freeze`
+  - we test code - writing: `npm test` in console
+
 - 1-08 React Counter Example + Webpack configuration
   - introduce webpack build with React (you can clone this branch and `npm install` all dependencies)
   - application will work at `localhost:8080`
