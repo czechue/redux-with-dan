@@ -1,5 +1,8 @@
 ### Log
 
+- 1-12 Redux: Writing a Todo List Reducer (Toggling a Todo)
+  - we are still in playground/todo 1-11 file
+
 - 1-11 Redux: Writing a Todo List Reducer (Adding a Todo)
   - write code in playground
   - test reducer 
