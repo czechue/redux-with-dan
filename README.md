@@ -1,10 +1,15 @@
 ### Log
 
+- 1-15 Redux: Reducer Composition with combineReducers()
+  - implement combineReducer as a Redux method
+  - file: playground/todo/1-15
+
 - 1-14 Redux: Reducer Composition with Objects
   - introduce Redux Composition pattern with many reducers
   - code went into src/index.js - but it doesn't work yet so don't bother to `npm start` it
   - old counter example - stored in 1-04-counter.js
-  **PLUS**
+
+    **PLUS:**
   - test todosApp function that combine reducers
   - test visibilityFilter function
 
@@ -45,3 +50,6 @@
 
 - 1-04: The Reducer Function
 - 1-03: Pure and Impure Functions
+
+### general todos
+- add editor.config (2 spacec instead of 4)
