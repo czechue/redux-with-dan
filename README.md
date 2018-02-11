@@ -1,8 +1,12 @@
 ### Log
 
+- 1-11 Redux: Writing a Todo List Reducer (Adding a Todo)
+  - write code in playground
+  - test reducer 
+
 - 1-10 Redux: Avoiding Object Mutations with Object.assign() and ...spread
   - write code in playground
-  - test toggling object's properties in todo list function
+  - test toggling object's properties in todo list function 
 
 - 1-09 Redux: Avoiding Array Mutations with concat(), slice(), and ...spread
   - write code in playground
