@@ -35,6 +35,68 @@ const todos = (state = [], action) => {
 	}
 };
 
+const visibilityFilter = (
+	state = 'SHOW_ALL',
+	action
+) => {
+	switch (action.type) {
+		case 'SET_VISIBILITY_FILTER':
+			return action.filter
+		default:
+			return state;
+	}
+}
+
+const todoApp = (state = {}, action) => {
+	return {
+		todos: todos(
+			state.todos,
+			action
+		),
+		visibilityFilter: visibilityFilter(
+			state.visibilityFilter,
+			action
+		)
+	}
+}
+
+describe('todoApp', () => {
+	test('changing visibility filter only doesnt affect todos state', () => {
+		const stateBefore = {
+			todos: ['todo1', 'todo2'],
+			visibilityFilter: 'SHOW_ALL'
+		}
+		const action = {
+			type: 'SET_VISIBILITY_FILTER',
+			filter: 'SHOW_COMPLETED'
+		}
+		const stateAfter = {
+			todos: ['todo1', 'todo2'],
+			visibilityFilter: 'SHOW_COMPLETED'
+		}
+		deepFreeze(stateBefore);
+		deepFreeze(action);
+
+		expect(todoApp(stateBefore, action)).toEqual(stateAfter)
+	})
+});
+
+describe('visibilityFilter', () => {
+	test('set visibility filter', () => {
+		const filterBefore = 'SHOW_ALL'
+		const action = {
+			type: 'SET_VISIBILITY_FILTER',
+			filter: 'SHOW_COMPLETED'
+		}
+		const filterAfter = 'SHOW_COMPLETED'		
+		
+		deepFreeze(filterBefore);
+		deepFreeze(action);
+
+		expect(visibilityFilter(filterBefore, action)).toEqual(filterAfter)
+	})
+});
+
 describe('Todo Reducer', () => {
 	test('add todo', () => {
 		const stateBefore = [];

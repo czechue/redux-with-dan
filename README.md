@@ -1,5 +1,13 @@
 ### Log
 
+- 1-14 Redux: Reducer Composition with Objects
+  - introduce Redux Composition pattern with many reducers
+  - code went into src/index.js - but it doesn't work yet so don't bother to `npm start` it
+  - old counter example - stored in 1-04-counter.js
+  **PLUS**
+  - test todosApp function that combine reducers
+  - test visibilityFilter function
+
 - 1-13 Redux: Reducer Composition with Arrays
   - we are still in playground/todo 1-11 file
   - refactoring of reducer to change nested values without mutation

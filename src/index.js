@@ -3,45 +3,68 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { createStore } from 'redux'
 
-const counter = (state = 0, action) => {
+// it doesn't work in 1-14 yet
+// so don't boter to npm start it 
+
+const todo = (state, action) => {
 	switch (action.type) {
-		case 'INCREMENT':
-			return state + 1;
-		case 'DECREMENT':
-			return state - 1;
+		case 'ADD_TODO':
+			return {
+				id: action.id,
+				text: action.text,
+				completed: false
+			}
+		case 'TOGGLE_TODO':
+			if (state.id != action.id) {
+				return state
+			} else {
+				return {
+					...state,
+					completed: !action.completed
+				}
+			}
+	}
+}
+
+const todos = (state = [], action) => {
+	switch (action.type) {
+		case 'ADD_TODO':
+			return [
+				...state,
+				todo(undefined, action)
+			];
+		case 'TOGGLE_TODO':
+			return state.map(t => todo(t, action))
+
+		default:
+			return state;
+	}
+};
+
+const visibilityFilter = (
+	state = 'SHOW_ALL',
+	action
+) => {
+	switch (action.type) {
+		case 'SET_VISIBILITY_FILTER':
+			return action.filter
 		default:
 			return state;
 	}
 }
 
-const store = createStore(counter)
-
-const Counter = ({ value, onIncrement, onDecrement }) => (<div>
-	<h1>{value}</h1>
-	<button onClick={onIncrement}>+</button>
-	<button onClick={onDecrement}>-</button>
-</div>
-)
-
-const render = () => {
-	ReactDOM.render(
-		<Counter
-			value={store.getState()}
-			onIncrement={() =>
-				store.dispatch({ type: 'INCREMENT' })
-			}
-			onDecrement={() =>
-				store.dispatch({
-					type: 'DECREMENT'
-				})
-			}
-		/>,
-		document.getElementById('root')
-	)
+// reducer composition pattern
+const todoApp = (state = {}, action) => {
+	return {
+		todos: todos(
+			state.todos,
+			action
+		),
+		visibilityFilter: visibilityFilter(
+			state.visibilityFilter,
+			action
+		)
+	}
 }
 
-store.subscribe(render)
-render()
-
-
-
+const store = createStore(todoApp)
