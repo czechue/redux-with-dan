@@ -60,100 +60,100 @@ const todoApp = (state = {}, action) => {
 	}
 }
 
-describe('todoApp', () => {
-	test('changing visibility filter only doesnt affect todos state', () => {
-		const stateBefore = {
-			todos: ['todo1', 'todo2'],
-			visibilityFilter: 'SHOW_ALL'
-		}
-		const action = {
-			type: 'SET_VISIBILITY_FILTER',
-			filter: 'SHOW_COMPLETED'
-		}
-		const stateAfter = {
-			todos: ['todo1', 'todo2'],
-			visibilityFilter: 'SHOW_COMPLETED'
-		}
-		deepFreeze(stateBefore);
-		deepFreeze(action);
+// describe('todoApp', () => {
+// 	test('changing visibility filter only doesnt affect todos state', () => {
+// 		const stateBefore = {
+// 			todos: ['todo1', 'todo2'],
+// 			visibilityFilter: 'SHOW_ALL'
+// 		}
+// 		const action = {
+// 			type: 'SET_VISIBILITY_FILTER',
+// 			filter: 'SHOW_COMPLETED'
+// 		}
+// 		const stateAfter = {
+// 			todos: ['todo1', 'todo2'],
+// 			visibilityFilter: 'SHOW_COMPLETED'
+// 		}
+// 		deepFreeze(stateBefore);
+// 		deepFreeze(action);
 
-		expect(todoApp(stateBefore, action)).toEqual(stateAfter)
-	})
-});
+// 		expect(todoApp(stateBefore, action)).toEqual(stateAfter)
+// 	})
+// });
 
-describe('visibilityFilter', () => {
-	test('set visibility filter', () => {
-		const filterBefore = 'SHOW_ALL'
-		const action = {
-			type: 'SET_VISIBILITY_FILTER',
-			filter: 'SHOW_COMPLETED'
-		}
-		const filterAfter = 'SHOW_COMPLETED'		
+// describe('visibilityFilter', () => {
+// 	test('set visibility filter', () => {
+// 		const filterBefore = 'SHOW_ALL'
+// 		const action = {
+// 			type: 'SET_VISIBILITY_FILTER',
+// 			filter: 'SHOW_COMPLETED'
+// 		}
+// 		const filterAfter = 'SHOW_COMPLETED'		
 		
-		deepFreeze(filterBefore);
-		deepFreeze(action);
+// 		deepFreeze(filterBefore);
+// 		deepFreeze(action);
 
-		expect(visibilityFilter(filterBefore, action)).toEqual(filterAfter)
-	})
-});
+// 		expect(visibilityFilter(filterBefore, action)).toEqual(filterAfter)
+// 	})
+// });
 
-describe('Todo Reducer', () => {
-	test('add todo', () => {
-		const stateBefore = [];
-		const action = {
-			type: 'ADD_TODO',
-			id: 0,
-			text: 'Learn Redux'
-		};
-		const stateAfter = [
-			{
-				id: 0,
-				text: 'Learn Redux',
-				completed: false
-			}
-		];
+// describe('Todo Reducer', () => {
+// 	test('add todo', () => {
+// 		const stateBefore = [];
+// 		const action = {
+// 			type: 'ADD_TODO',
+// 			id: 0,
+// 			text: 'Learn Redux'
+// 		};
+// 		const stateAfter = [
+// 			{
+// 				id: 0,
+// 				text: 'Learn Redux',
+// 				completed: false
+// 			}
+// 		];
 
-		deepFreeze(stateBefore);
-		deepFreeze(action);
+// 		deepFreeze(stateBefore);
+// 		deepFreeze(action);
 
-		expect(todos(stateBefore, action)).toEqual(stateAfter);
-	});
+// 		expect(todos(stateBefore, action)).toEqual(stateAfter);
+// 	});
 
-	test('toggle todo', () => {
-		const stateBefore = [
-			{
-				id: 0,
-				text: 'Learn Redux',
-				completed: false
-			},
-			{
-				id: 1,
-				text: 'Go shopping',
-				completed: false
-			}
-		];
-		const action = {
-			type: 'TOGGLE_TODO',
-			id: 1
-		}
-		const stateAfter = [
-			{
-				id: 0,
-				text: 'Learn Redux',
-				completed: false
-			},
-			{
-				id: 1,
-				text: 'Go shopping',
-				completed: true
-			}
-		];
+// 	test('toggle todo', () => {
+// 		const stateBefore = [
+// 			{
+// 				id: 0,
+// 				text: 'Learn Redux',
+// 				completed: false
+// 			},
+// 			{
+// 				id: 1,
+// 				text: 'Go shopping',
+// 				completed: false
+// 			}
+// 		];
+// 		const action = {
+// 			type: 'TOGGLE_TODO',
+// 			id: 1
+// 		}
+// 		const stateAfter = [
+// 			{
+// 				id: 0,
+// 				text: 'Learn Redux',
+// 				completed: false
+// 			},
+// 			{
+// 				id: 1,
+// 				text: 'Go shopping',
+// 				completed: true
+// 			}
+// 		];
 
-		deepFreeze(stateBefore);
-		deepFreeze(action);
+// 		deepFreeze(stateBefore);
+// 		deepFreeze(action);
 
-		expect(todos(stateBefore, action)).toEqual(stateAfter)
+// 		expect(todos(stateBefore, action)).toEqual(stateAfter)
 
-	})
-});
+// 	})
+// });
 
