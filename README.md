@@ -1,5 +1,9 @@
 ### Log
 
+- 1-13 Redux: Reducer Composition with Arrays
+  - we are still in playground/todo 1-11 file
+  - refactoring of reducer to change nested values without mutation
+
 - 1-12 Redux: Writing a Todo List Reducer (Toggling a Todo)
   - we are still in playground/todo 1-11 file
 
