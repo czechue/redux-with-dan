@@ -1,4 +1,7 @@
 ### Log
+- 1-21 Redux: Extracting Presentational Components (AddTodo, Footer, FilterLink)
+  - file index.js in src folder
+
 - 1-20 Redux: Extracting Presentational Components (Todo, TodoList)
   - file index.js in src folder
 
