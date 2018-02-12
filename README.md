@@ -1,5 +1,11 @@
 ### Log
 
+- 1-17 Redux: React Todo List Example (Adding a Todo)
+  - file index.js in src folder
+
+- 1-16 Redux: Implementing combineReducer() from scratch
+  - file playground/todo/1-16
+
 - 1-15 Redux: Reducer Composition with combineReducers()
   - implement combineReducer as a Redux method
   - file: playground/todo/1-15
