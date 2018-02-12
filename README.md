@@ -1,8 +1,13 @@
 ### Log
+- 1-23 Redux: Extracting Container Components (VisibleTodoList, AddTodo)
+  - file index.js in src folder
+  - TodoApp became presentational component without any data
+  - Todos and Add todos were extracted
+
 - 1-22 Redux: Extracting Container Components (FilterLink)
-    - file index.js in src folder
-    - FilterLink is a container - provide data and the behavior
-    - Link only specify the appearence of link if it's active or non active (doesnt know about behavior)
+  - file index.js in src folder
+  - FilterLink is a container - provide data and the behavior
+  - Link only specify the appearence of link if it's active or non active (doesnt know about behavior)
 
 - 1-21 Redux: Extracting Presentational Components (AddTodo, Footer, FilterLink)
   - file index.js in src folder
