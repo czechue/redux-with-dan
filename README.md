@@ -1,5 +1,7 @@
 ### Log
-
+- 1-18 React Todo List Example (Toggling a Todo)
+  - file index.js in src folder
+  
 - 1-17 Redux: React Todo List Example (Adding a Todo)
   - file index.js in src folder
 
