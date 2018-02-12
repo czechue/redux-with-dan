@@ -60,26 +60,26 @@ const todoApp = (state = {}, action) => {
 	}
 }
 
-// describe('todoApp', () => {
-// 	test('changing visibility filter only doesnt affect todos state', () => {
-// 		const stateBefore = {
-// 			todos: ['todo1', 'todo2'],
-// 			visibilityFilter: 'SHOW_ALL'
-// 		}
-// 		const action = {
-// 			type: 'SET_VISIBILITY_FILTER',
-// 			filter: 'SHOW_COMPLETED'
-// 		}
-// 		const stateAfter = {
-// 			todos: ['todo1', 'todo2'],
-// 			visibilityFilter: 'SHOW_COMPLETED'
-// 		}
-// 		deepFreeze(stateBefore);
-// 		deepFreeze(action);
+describe('todoApp', () => {
+	test('changing visibility filter only doesnt affect todos state', () => {
+		const stateBefore = {
+			todos: ['todo1', 'todo2'],
+			visibilityFilter: 'SHOW_ALL'
+		}
+		const action = {
+			type: 'SET_VISIBILITY_FILTER',
+			filter: 'SHOW_COMPLETED'
+		}
+		const stateAfter = {
+			todos: ['todo1', 'todo2'],
+			visibilityFilter: 'SHOW_COMPLETED'
+		}
+		deepFreeze(stateBefore);
+		deepFreeze(action);
 
-// 		expect(todoApp(stateBefore, action)).toEqual(stateAfter)
-// 	})
-// });
+		expect(todoApp(stateBefore, action)).toEqual(stateAfter)
+	})
+});
 
 // describe('visibilityFilter', () => {
 // 	test('set visibility filter', () => {
