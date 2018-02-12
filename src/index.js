@@ -15,14 +15,13 @@ const todo = (state, action) => {
 				completed: false
 			};
 		case 'TOGGLE_TODO':
-			if (state.id != action.id) {
+			if (state.id !== action.id) {
 				return state;
-			} else {
-				return {
-					...state,
-					completed: !action.completed
-				};
 			}
+			return {
+				...state,
+				completed: !state.completed
+			};
 	}
 };
 
@@ -77,7 +76,25 @@ class TodoApp extends Component {
 				>
 					Add Todo
 				</button>
-				<ul>{this.props.todos.map((todo) => <li key={todo.id}>{todo.text}</li>)}</ul>
+				<ul>
+					{this.props.todos.map((todo) => (
+						<li
+							key={todo.id}
+							onClick={() => {
+								console.log(todo.id);
+								console.log(todo.completed);
+
+								store.dispatch({
+									type: 'TOGGLE_TODO',
+									id: todo.id
+								});
+							}}
+							style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+						>
+							{todo.text}
+						</li>
+					))}
+				</ul>
 			</div>
 		);
 	}
