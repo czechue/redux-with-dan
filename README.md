@@ -1,4 +1,7 @@
 ### Log
+- 1-20 Redux: Extracting Presentational Components (Todo, TodoList)
+  - file index.js in src folder
+
 - 1-19 Redux: React Todo List Example (Filtering Todos)
   - file index.js in src folder
 
