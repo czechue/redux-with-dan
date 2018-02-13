@@ -1,4 +1,8 @@
 ### Log
+- 1-24 Redux: Passing the Store Down Explicitly via Props
+  - as the tittle say
+  - file src/index.js
+
 - 1-23 Redux: Extracting Container Components (VisibleTodoList, AddTodo)
   - file index.js in src folder
   - TodoApp became presentational component without any data
