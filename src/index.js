@@ -27,7 +27,7 @@ const todo = (state, action) => {
 const todos = (state = [], action) => {
 	switch (action.type) {
 		case 'ADD_TODO':
-			return [...state, todo(undefined, action)];
+			return [ ...state, todo(undefined, action) ];
 		case 'TOGGLE_TODO':
 			return state.map((t) => todo(t, action));
 
@@ -129,7 +129,7 @@ const TodoList = ({ todos, onTodoClick }) => (
 );
 
 let nextTodoId = 0;
-const AddTodo = (props, { store }) => {
+let AddTodo = ({ dispatch }) => {
 	let input;
 	return (
 		<div>
@@ -140,7 +140,7 @@ const AddTodo = (props, { store }) => {
 			/>
 			<button
 				onClick={() => {
-					store.dispatch({
+					dispatch({
 						type: 'ADD_TODO',
 						id: nextTodoId++,
 						text: input.value
@@ -153,9 +153,8 @@ const AddTodo = (props, { store }) => {
 		</div>
 	);
 };
-AddTodo.contextTypes = {
-	store: PropTypes.object
-};
+// if u pass null in connect() - u will have dispatch as a prop in AddTodo
+AddTodo = connect()(AddTodo); 
 
 const getVisibleTodos = (todos, filter) => {
 	switch (filter) {
@@ -170,27 +169,27 @@ const getVisibleTodos = (todos, filter) => {
 	}
 };
 
-const mapStateToProps = (state) => {
+const mapStateToTodoListProps = (state) => {
 	return {
 		todos: getVisibleTodos(state.todos, state.visibilityFilter)
-	}
-}
+	};
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToTodoListProps = (dispatch) => {
 	return {
 		onTodoClick: (id) => {
 			dispatch({
 				type: 'TOGGLE_TODO',
 				id
-			})
+			});
 		}
-	}
-}
+	};
+};
 
 const VisibleTodoList = connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(TodoList)
+	mapStateToTodoListProps,
+	mapDispatchToTodoListProps
+)(TodoList);
 
 const TodoApp = () => (
 	<div>

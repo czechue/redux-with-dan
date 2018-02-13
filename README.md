@@ -1,4 +1,8 @@
 ### Log
+- 1-28 Redux: Generating Containers with connect() from React Redux (AddTodo)
+  - add connect()
+  - with AddTodo = connect()(AddTodo) - u pass 'dispatch' as a prop to AddTodo
+
 - 1-27 Redux: Generating Containers with connect() from React Redux (VisibleTodoList)
   - add connect()
   - used mapStateToProps() and mapDispatchToProps() functions
