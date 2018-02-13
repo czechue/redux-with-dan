@@ -1,4 +1,7 @@
 ### Log
+- 1-27 Redux: Generating Containers with connect() from React Redux (VisibleTodoList)
+  - add connect()
+  - used mapStateToProps() and mapDispatchToProps() functions
 
 - 1-26 Redux: Passing the Store Down with <Provider> from React Redux
   - `npm install react-redux`
