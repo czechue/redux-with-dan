@@ -1,4 +1,13 @@
 ### Log
+
+- 1-26 Redux: Passing the Store Down with <Provider> from React Redux
+  - `npm install react-redux`
+
+- 1-25 Redux: Passing the Store Down Implicitly via Context
+  - as the tittle say
+  - file src/index.js
+  - install prop-types: `npm install prop-types`
+
 - 1-24 Redux: Passing the Store Down Explicitly via Props
   - as the tittle say
   - file src/index.js
