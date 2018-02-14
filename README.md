@@ -1,4 +1,8 @@
 ### Log
+- 1-29 Redux: Generating Containers with connect() from React Redux (FooterLink)
+  - props are passed as a second argument to:
+    const mapStateToLinkProps = (state, props) => { }
+
 - 1-28 Redux: Generating Containers with connect() from React Redux (AddTodo)
   - add connect()
   - with AddTodo = connect()(AddTodo) - u pass 'dispatch' as a prop to AddTodo
