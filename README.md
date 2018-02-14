@@ -1,4 +1,6 @@
 ### Log
+- 1-30 Redux: Extracting Action Creators
+
 - 1-29 Redux: Generating Containers with connect() from React Redux (FooterLink)
   - props are passed as a second argument to:
     const mapStateToLinkProps = (state, props) => { }

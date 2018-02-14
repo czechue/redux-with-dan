@@ -45,11 +45,35 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
 	}
 };
 
+const toggleTodo = (id) => {
+	return {
+		type: 'TOGGLE_TODO',
+		id
+	};
+};
+
 // reducer composition pattern
 const todoApp = combineReducers({
 	todos,
 	visibilityFilter
 });
+
+// ACTION CREATORS:
+let nextTodoId = 0;
+const addTodo = (text) => {
+	return {
+		type: 'ADD_TODO',
+		id: nextTodoId++,
+		text
+	};
+};
+
+const setVisibilityFilter = (filter) => {
+	return {
+		type: 'SET_VISIBILITY_FILTER',
+		filter
+	};
+};
 
 const Link = ({ active, children, onClick }) => {
 	if (active) {
@@ -72,21 +96,18 @@ const Link = ({ active, children, onClick }) => {
 const mapStateToLinkProps = (state, ownProps) => {
 	return {
 		active: ownProps.filter === state.visibilityFilter
-	}
-}
+	};
+};
 
-const mapDispatchToLinkProps = ( dispatch, ownProps ) => {
+const mapDispatchToLinkProps = (dispatch, ownProps) => {
 	return {
 		onClick: () => {
-			dispatch({
-				type: 'SET_VISIBILITY_FILTER',
-				filter: ownProps.filter
-			})
+			dispatch(setVisibilityFilter(ownProps.filter));
 		}
-	}
-}
+	};
+};
 
-const FilterLink = connect(mapStateToLinkProps, mapDispatchToLinkProps)(Link)
+const FilterLink = connect(mapStateToLinkProps, mapDispatchToLinkProps)(Link);
 
 const Footer = () => (
 	<p>
@@ -113,7 +134,6 @@ const TodoList = ({ todos, onTodoClick }) => (
 	</ul>
 );
 
-let nextTodoId = 0;
 let AddTodo = ({ dispatch }) => {
 	let input;
 	return (
@@ -125,11 +145,7 @@ let AddTodo = ({ dispatch }) => {
 			/>
 			<button
 				onClick={() => {
-					dispatch({
-						type: 'ADD_TODO',
-						id: nextTodoId++,
-						text: input.value
-					});
+					dispatch(addTodo(input.value));
 					input.value = '';
 				}}
 			>
@@ -139,7 +155,7 @@ let AddTodo = ({ dispatch }) => {
 	);
 };
 // if u pass null in connect() - u will have dispatch as a prop in AddTodo
-AddTodo = connect()(AddTodo); 
+AddTodo = connect()(AddTodo);
 
 const getVisibleTodos = (todos, filter) => {
 	switch (filter) {
@@ -163,10 +179,7 @@ const mapStateToTodoListProps = (state) => {
 const mapDispatchToTodoListProps = (dispatch) => {
 	return {
 		onTodoClick: (id) => {
-			dispatch({
-				type: 'TOGGLE_TODO',
-				id
-			});
+			dispatch(toggleTodo(id));
 		}
 	};
 };
