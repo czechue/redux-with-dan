@@ -1,4 +1,7 @@
 ### Log
+- 2-3 Redux: Persisting the State to the Local Storage
+  - install module: `npm install uuid` (instead of node-uuid)
+  - install module: `npm install lodash.throttle` (isntead of lodash)
 
 - 2-2 Redux: Supplying the Initial State
   - Redux let pass the persistedState as a 2nd argument to createStore function
