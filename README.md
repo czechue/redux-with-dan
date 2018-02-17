@@ -1,4 +1,13 @@
 ### Log
+
+- 2-1 Redux: Simplifying the Arrow Functions
+  - move arch folder to playground
+  - in playground/arch/1-30 - you can find complete 1 file code from previous course
+  - now all code is moved to separated files
+  - actions and containers are refactored in ES6 arrow function way
+
+*********************************
+
 - 1-30 Redux: Extracting Action Creators
 
 - 1-29 Redux: Generating Containers with connect() from React Redux (FooterLink)
