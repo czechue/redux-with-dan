@@ -1,4 +1,7 @@
 ### Log
+- 2-4 Redux: Refactoring the Entry Point
+  - add Root component with Provider in
+
 - 2-3 Redux: Persisting the State to the Local Storage
   - install module: `npm install uuid` (instead of node-uuid)
   - install module: `npm install lodash.throttle` (isntead of lodash)
