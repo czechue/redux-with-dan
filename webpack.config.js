@@ -62,5 +62,9 @@ module.exports = {
 			filename: 'index.html',
 			inject: 'body'
 		})
-	]
+	],
+	devServer: {
+		port: 8080,
+		historyApiFallback: true
+	}
 };
