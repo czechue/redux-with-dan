@@ -1,4 +1,10 @@
 ### Log
+- 2-6 Redux: Navigating with React Router <Link>
+  - import Link from `react-router-dom` (instead of react-router)
+  - delete action setVisibilityFilter
+  - change filters name in Footer
+  - refactor FilterLink with <Link>
+
 - 2-5 Redux: Adding React Router to the Project
   - install module: `npm install react-router-dom` (instead of react-router)
   - code changes in Root.js component
