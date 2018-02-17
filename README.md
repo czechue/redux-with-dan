@@ -1,4 +1,8 @@
 ### Log
+- 2-5 Redux: Adding React Router to the Project
+  - install module: `npm install react-router-dom` (instead of react-router)
+  - code changes in Root.js component
+
 - 2-4 Redux: Refactoring the Entry Point
   - add Root component with Provider in
 
