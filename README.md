@@ -1,4 +1,12 @@
 ### Log
+- 2-7 Redux: Filtering Redux State with React Router Params
+  - instead of writing your own proxy (so refreshing page with /active route will work ), you need to add to webpackconfig:
+  devServer: {
+      port: 8080,
+      historyApiFallback: true
+    }
+  - `match.params.filter` are needed in order to get params (not `params.filter`)
+
 - 2-6 Redux: Navigating with React Router <Link>
   - import Link from `react-router-dom` (instead of react-router)
   - delete action setVisibilityFilter
