@@ -1,5 +1,8 @@
 ### Log
 
+- 2-2 Redux: Supplying the Initial State
+  - Redux let pass the persistedState as a 2nd argument to createStore function
+
 - 2-1 Redux: Simplifying the Arrow Functions
   - move arch folder to playground
   - in playground/arch/1-30 - you can find complete 1 file code from previous course
