@@ -1,4 +1,8 @@
 ### Log
+- 2-8 Redux: Using withRouter() to Inject the Params into Connected Components
+  - install `npm instll react-router`
+  - withRouter generates `history.match.params` props (instead of `params`)
+
 - 2-7 Redux: Filtering Redux State with React Router Params
   - instead of writing your own proxy (so refreshing page with /active route will work ), you need to add to webpackconfig:
   devServer: {
