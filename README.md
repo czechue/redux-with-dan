@@ -1,4 +1,9 @@
 ### Log
+- 2-18 Redux: Applying Redux Middleware
+  - we use `applyMiddleware` which is redux's method (it's same as custom wrapDispatchWithMiddlewares - that was written from scratch in the 2-17)
+  - `npm install redux-promise` - middleware that implemence the promise support
+  - `npm install redux-logger`
+
 - 2-17 Redux: The Middleware Chain
   - genious explanation on middlewares by Dan in this chapter
   - **purpose of the middleware** is to replace the single dispatch function with the chain of composeable dispatch functions which each can do something with the action.
