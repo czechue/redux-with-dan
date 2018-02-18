@@ -1,4 +1,9 @@
 ### Log
+- 2-14 Redux: Fetching Data on Route Change
+  - all fetching in LifeCycle Hooks in VisibleTodoList component
+  - use componentDidMount() - so the data is fetched at the very first time
+  - use componentDidUpdate(prevProps) - so the data is fetched when filter prop is changed
+
 - 2-13 Redux: Adding a Fake backend to the Project
   - moved so far code to the playground
   - deleting all localStorage connected files
