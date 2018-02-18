@@ -1,4 +1,8 @@
 ### Log
+- 2-13 Redux: Adding a Fake backend to the Project
+  - moved so far code to the playground
+  - deleting all localStorage connected files
+
 - 2-12 Redux: Wrapping dispatch() to Log Actions
   - clever ;)
 
