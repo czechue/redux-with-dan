@@ -1,4 +1,7 @@
 ### Log
+- 2-12 Redux: Wrapping dispatch() to Log Actions
+  - clever ;)
+
 - 2-11 Redux: Normalizing the State Shape
   - extracting todo reducer in separated file
   - refactoring reducers into smaller pieces
