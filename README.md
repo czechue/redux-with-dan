@@ -1,16 +1,18 @@
 ### Log
+- 2-10 Redux: Colocating Selectors with Reducers
+  - 
+
 - 2-9 Redux: Using mapDispatchToProps() Shorthand Notation
+  ```javascript
+  const mapDispatchToProps = (dispatch) => ({
+    onTodoClick(id) {
+      dispatch(toggleTodo(id));
+    }
+  });
 
-```javascript
-const mapDispatchToProps = (dispatch) => ({
-  onTodoClick(id) {
-    dispatch(toggleTodo(id));
-  }
-});
-
-// same as:
-{onTodoClick: toggleTodo} // in connect function
-```
+  // same as:
+  {onTodoClick: toggleTodo} // in connect function
+  ```
 
 - 2-8 Redux: Using withRouter() to Inject the Params into Connected Components
   - install `npm instll react-router`
