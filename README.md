@@ -1,4 +1,26 @@
 ### Log
+- 2-17 Redux: The Middleware Chain
+  - genious explanation on middlewares by Dan in this chapter
+  - **purpose of the middleware** is to replace the single dispatch function with the chain of composeable dispatch functions which each can do something with the action.
+  It is powerful system that let us to put custom behavior before actions reach the reducers. Loggings, analytics, error handligns, asynchronous flow and more.
+
+  ```javascript
+  // promise middleware implementation:
+  const promise = (store) => (next) => (action) => {
+    if (typeof action.then === 'function') {
+      return action.then(next);
+    }
+    return next(action);
+  };
+
+  // middleware wrapper implementation
+  const wrapDispatchWithMiddlewares = (store, middlewares) => {
+    middlewares.slice().reverse().forEach(middleware => 
+      store.dispatch = middleware(store)(store.dispatch)
+    );
+  };
+  ```
+
 - 2-16 Redux: Wrapping dispatch() to Recognize Promises
   - refactoring action creators, and make dispatch to regognize promises
 
@@ -22,7 +44,7 @@
   - refactoring reducers into smaller pieces
 
 - 2-10 Redux: Colocating Selectors with Reducers
-  - 
+  - creating selectors in reduxer
 
 - 2-9 Redux: Using mapDispatchToProps() Shorthand Notation
   ```javascript
