@@ -1,4 +1,7 @@
 ### Log
+- 2-15 Redux: Dispatching Actions with the Fetched Data
+  - create new action creator: `receiveTodos`
+
 - 2-14 Redux: Fetching Data on Route Change
   - all fetching in LifeCycle Hooks in VisibleTodoList component
   - use componentDidMount() - so the data is fetched at the very first time
