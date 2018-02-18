@@ -1,4 +1,7 @@
 ### Log
+- 2-16 Redux: Wrapping dispatch() to Recognize Promises
+  - refactoring action creators, and make dispatch to regognize promises
+
 - 2-15 Redux: Dispatching Actions with the Fetched Data
   - create new action creator: `receiveTodos`
 
