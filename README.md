@@ -1,4 +1,17 @@
 ### Log
+- 2-9 Redux: Using mapDispatchToProps() Shorthand Notation
+
+```javascript
+const mapDispatchToProps = (dispatch) => ({
+  onTodoClick(id) {
+    dispatch(toggleTodo(id));
+  }
+});
+
+// same as:
+{onTodoClick: toggleTodo} // in connect function
+```
+
 - 2-8 Redux: Using withRouter() to Inject the Params into Connected Components
   - install `npm instll react-router`
   - withRouter generates `history.match.params` props (instead of `params`)
