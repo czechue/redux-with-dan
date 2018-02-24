@@ -1,7 +1,10 @@
 ### Log
+- 2-21 Redux: Displaying Loading Indicators
+  - error to fix: `https://gyazo.com/1658581d0b9134ab93e7254be4260edb`
+
 - 2-20 Redux: Refactoring the Reducers
   - creating complex funcional export:
-  
+
   ```javascript
     export const getVisibleTodos = (state, filter) => {
       const ids = fromList.getIds(state.listByFilter[filter]);
