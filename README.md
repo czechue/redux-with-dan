@@ -1,7 +1,7 @@
 ### Log
 - 2-19 Redux: Updating the State with the Fetched Data
   - removing `const allTodos = getAllTodos(state)` cuz its inpracticalt to fetch all todos from server before filtering them
-  - 
+  - creating new combine reducer `idsByFilter`
 
 - 2-18 Redux: Applying Redux Middleware
   - we use `applyMiddleware` which is redux's method (it's same as custom wrapDispatchWithMiddlewares - that was written from scratch in the 2-17)
