@@ -1,11 +1,12 @@
 ### Log
 - 2-20 Redux: Refactoring the Reducers
   - creating complex funcional export:
+  
   ```javascript
     export const getVisibleTodos = (state, filter) => {
-    const ids = fromList.getIds(state.listByFilter[filter]);
-    return ids.map((id) => fromById.getTodo(state.byId[id], id));
-  };
+      const ids = fromList.getIds(state.listByFilter[filter]);
+      return ids.map((id) => fromById.getTodo(state.byId[id], id));
+    };
   ```
 
 - 2-19 Redux: Updating the State with the Fetched Data
