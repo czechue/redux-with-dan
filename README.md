@@ -1,4 +1,13 @@
 ### Log
+- 2-23 Redux: Avoiding Race Conditions with Thunk
+  - add store.getState() as a 2nd argument to the action functions
+```javascript
+const thunk = (store) => (next) => (action) => 
+	typeof action === 'function' ?
+		action(store.dispatch, store.getState) :
+    next(action);
+```
+
 - 2-22 Redux: Dispatching Actions Asynchronously with Thunks
   - removing `promise middleware` from configureStore.js
   - implementing `thunk` middleware instead:
