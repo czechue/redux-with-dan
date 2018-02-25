@@ -1,4 +1,9 @@
 ### Log
+- 2-26 Redux: Normalizing API Responses with normalizr
+  - normalizing state
+  - updating normalizer to newer version schemas
+  - still CORS err
+
 - 2-25 Redux: Creating Data on the Server
   - refactoring reducers to work with asynch
   - add addTodo to fake data base
