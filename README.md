@@ -1,4 +1,9 @@
+### Todo
+- fix CORS error
+
 ### Log
+- 2-27 Redux: Toggle data in Data Base
+
 - 2-26 Redux: Normalizing API Responses with normalizr
   - normalizing state
   - updating normalizer to newer version schemas
@@ -259,6 +264,3 @@ const thunk = (store) => (next) => (action) =>
 
 - 1-04: The Reducer Function
 - 1-03: Pure and Impure Functions
-
-### general todos
-- add editor.config (2 spacec instead of 4)
