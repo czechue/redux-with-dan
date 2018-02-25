@@ -15,7 +15,7 @@ const configureStore = () => {
 		// persistedState, // if u want to specify or skip
 		compose(
 			applyMiddleware(...middlewares),
-			window.devToolsExtension && window.devToolsExtension()
+			// window.devToolsExtension && window.devToolsExtension()
 		)
 	);
 };
