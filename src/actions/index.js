@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { getIsFetching } from '../reducers'
+import { getIsFetching } from '../reducers';
 import * as api from '../../backend';
 
 const requestTodos = (filter) => ({
