@@ -1,4 +1,16 @@
 ### Log
+- 2-22 Redux: Dispatching Actions Asynchronously with Thunks
+  - removing `promise middleware` from configureStore.js
+  - implementing `thunk` middleware instead:
+  ```javascript
+  const thunk = (store) => (next) => (action) => 
+    typeof action === 'function' ?
+      action(store.dispatch) :
+      next(action);
+  ```
+
+  - still error
+
 - 2-21 Redux: Displaying Loading Indicators
   - error to fix: `https://gyazo.com/1658581d0b9134ab93e7254be4260edb`
 
