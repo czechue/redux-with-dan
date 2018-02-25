@@ -8,6 +8,7 @@
     "deep-freeze": "0.0.1",
     "jest": "^22.2.1",
     "lodash.throttle": "^4.1.1",
+    "normalizr": "^3.2.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
