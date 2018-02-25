@@ -1,4 +1,7 @@
 ### Log
+- 2-24 Redux: Displaying Error Messages
+  - od 2:54
+
 - 2-23 Redux: Avoiding Race Conditions with Thunk
   - add store.getState() as a 2nd argument to the action functions
 ```javascript
