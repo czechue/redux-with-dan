@@ -1,6 +1,12 @@
 ### Log
+- 2-25 Redux: Creating Data on the Server
+  - refactoring reducers to work with asynch
+  - add addTodo to fake data base
+  - still CORS err
+
 - 2-24 Redux: Displaying Error Messages
   - od 2:54
+  - still CORS err
 
 - 2-23 Redux: Avoiding Race Conditions with Thunk
   - add store.getState() as a 2nd argument to the action functions
@@ -10,6 +16,7 @@ const thunk = (store) => (next) => (action) =>
 		action(store.dispatch, store.getState) :
     next(action);
 ```
+  - still CORS err
 
 - 2-22 Redux: Dispatching Actions Asynchronously with Thunks
   - removing `promise middleware` from configureStore.js
@@ -20,8 +27,7 @@ const thunk = (store) => (next) => (action) =>
       action(store.dispatch) :
       next(action);
   ```
-
-  - still error
+  - still CORS err
 
 - 2-21 Redux: Displaying Loading Indicators
   - error to fix: `https://gyazo.com/1658581d0b9134ab93e7254be4260edb`
